@@ -2,11 +2,12 @@
 import Image from 'next/image';
 import CustomButton from './CustomButton';
 import MauiInfo from './MauiInfo';
+import PhotoCredit from './PhotoCredit';
 
 const EventDetails = () => {
     return (
         <>
-            <section className="container mx-auto py-12">
+            <section className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h3 className="text-2xl font-semibold">Date & Time</h3>
@@ -34,9 +35,10 @@ const EventDetails = () => {
                                 objectFit="cover"
                                 className="rounded-lg"
                             />
-                            <p className="absolute bottom-2 right-2 text-xs text-white bg-black/50 p-1 rounded">
-                                Photo by <a href="https://unsplash.com/@whereisfarid?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" className="underline">Farid Askerov</a> on <a href="https://unsplash.com/photos/body-of-water-under-white-cloudy-sky-during-daytime-photo-DSpC6QfjaWA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" className="underline">Unsplash</a>
-                            </p>
+                            <PhotoCredit
+                                name='Farid Askerov'
+                                href='https://unsplash.com/@whereisfarid?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
+                            />
                         </div>
                         <div className="relative h-64 w-full">
                             <Image
@@ -46,9 +48,10 @@ const EventDetails = () => {
                                 objectFit="cover"
                                 className="rounded-lg"
                             />
-                            <p className="absolute bottom-2 right-2 text-xs text-white bg-black/50 p-1 rounded">
-                                Photo by <a href="https://unsplash.com/@loveneora?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" className="underline">Neora Aylon</a> on <a href="https://unsplash.com/photos/palm-trees-facing-the-sea-5jErKxqb-Dk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank" rel="noopener noreferrer" className="underline">Unsplash</a>
-                            </p>
+                            <PhotoCredit
+                                name='Neora Aylon'
+                                href='https://unsplash.com/@loveneora?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
+                            />
                         </div>
                     </div>
                 </div>

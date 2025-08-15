@@ -8,7 +8,7 @@ import { AlertCircle } from 'lucide-react';
 const HotelDetails = () => {
     return (
         <section id="hotel-details" className='container mx-auto py-12'>
-            <h2 className='mb-8 text-3xl font-bold'>Hotel & Resort Information</h2>
+            <h2 className='mb-8 text-3xl font-bold px-4 sm:px-0'>Hotel & Resort Information</h2>
             <Card>
                 <CardHeader>
                     <CardTitle>Wailea Beach Resort - Marriott, Maui</CardTitle>

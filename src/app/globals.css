@@ -1,50 +1,48 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --card: #ffffff;
-  --card-foreground: #552d00;
-  --popover: #ffffff;
-  --popover-foreground: #552d00;
-  --primary: #b3932b; /* Gold */
-  --primary-foreground: #ffffff; /* White */
-  --secondary: #00533c; /* Dark Green */
-  --secondary-foreground: #552d00; /* Brown */
-  --muted: #ffffff;
-  --muted-foreground: #4f7a37; /* Medium Green */
-  --accent: #552d00; /* Brown */
-  --accent-foreground: #ffffff; /* White */
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: #ffffff;
-  --border: #b3932b;
-  --input: transparent;
-  --ring: #552d00;
-  --radius: 0.5rem;
-  --background: #ffffff; /* White */
-  --foreground: #552d00; /* Brown */
-  --gradient-border: linear-gradient(to top right, var(--background), var(--secondary));
+    --card: #ffffff;
+    --card-foreground: #552d00;
+    --popover: #ffffff;
+    --popover-foreground: #552d00;
+    --primary: #b3932b; /* Gold */
+    --primary-foreground: #ffffff; /* White */
+    --secondary: #00533c; /* Dark Green */
+    --secondary-foreground: #552d00; /* Brown */
+    --muted: #ffffff;
+    --muted-foreground: #4f7a37; /* Medium Green */
+    --accent: #552d00; /* Brown */
+    --accent-foreground: #ffffff; /* White */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: #ffffff;
+    --border: #b3932b;
+    --input: transparent;
+    --ring: #552d00;
+    --radius: 0.5rem;
+    --background: #ffffff; /* White */
+    --foreground: #552d00; /* Brown */
+    --gradient-border: linear-gradient(to top right, var(--secondary), var(--background));
 }
 
 @layer base {
-  * {
-    @apply border-[var(--border)] outline-[var(--ring)]/50;
-  }
-  html {
-    @apply scroll-smooth;
-  }
-  body {
-    @apply bg-[var(--background)] text-[var(--foreground)];
-  }
+    * {
+        @apply border-[var(--border)] outline-[var(--ring)]/50;
+    }
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply bg-[var(--background)] text-[var(--foreground)];
+    }
 
-  
-
-  .gradient-border-input {
-    border: 2px solid transparent;
-    border-image: var(--gradient-border) 1;
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-  }
+    .gradient-border-input {
+        border: 2px solid transparent;
+        border-image: var(--gradient-border) 1;
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    }
 }

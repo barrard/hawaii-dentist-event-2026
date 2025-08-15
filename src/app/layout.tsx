@@ -8,6 +8,7 @@ import { ThemeProvider } from 'next-themes';
 import '@/app/globals.css';
 import NavigationBar from '@/components/NavigationBar';
 import { Toaster } from '@/registry/new-york-v4/ui/sonner';
+import Analytics from '@/components/analytics'; // Import the Analytics component
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -39,6 +40,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
                     <NavigationBar />
                     {children}
                     <Toaster />
+                    <Analytics /> {/* Render the Analytics component */}
                 </ThemeProvider>
             </body>
         </html>

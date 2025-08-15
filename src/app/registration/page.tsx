@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import EventDetails from '@/components/registration/EventDetails';
-import Gallery from '@/components/registration/Gallery';
+import MauiActivities from '@/components/registration/MauiActivities';
 import HeroSection from '@/components/registration/HeroSection';
 import HotelDetails from '@/components/registration/HotelDetails';
 import RegistrationForm from '@/components/registration/RegistrationForm';
@@ -22,7 +22,7 @@ const RegistrationPage = () => {
             <HotelDetails />
             <Schedule />
             <Speakers />
-            <Gallery />
+            <MauiActivities />
             <RegistrationForm />
             <div className="container mx-auto py-12 flex justify-center">
                 <Image

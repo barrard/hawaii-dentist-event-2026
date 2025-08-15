@@ -1,27 +1,17 @@
-import { promises as fs } from 'fs';
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
+import dbConnect from '@/lib/dbConnect'; // Import dbConnect
+import Registration from '@/models/Registration'; // Import Registration model
 
 export async function POST(req: NextRequest) {
+    await dbConnect(); // Connect to the database
+
     try {
         const data = await req.json();
-        const filePath = path.join(process.cwd(), 'registrations.json');
 
-        let registrations = [];
-        try {
-            const fileContent = await fs.readFile(filePath, 'utf-8');
-            registrations = JSON.parse(fileContent);
-        } catch (error) {
-            // File might not exist yet, start with an empty array
-            if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-                throw error;
-            }
-        }
+        // Create a new registration document
+        const newRegistration = await Registration.create(data);
 
-        registrations.push(data);
-        await fs.writeFile(filePath, JSON.stringify(registrations, null, 2));
-
-        return NextResponse.json({ message: 'Registration successful!' }, { status: 200 });
+        return NextResponse.json({ message: 'Registration successful!', registration: newRegistration }, { status: 200 });
     } catch (error) {
         console.error('Registration API error:', error);
 

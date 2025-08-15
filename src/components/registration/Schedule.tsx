@@ -178,10 +178,9 @@ const EventSchedule = () => {
                     <Button
                         key={day.key}
                         variant='outline'
-                        size='lg'
                         onClick={() => setSelectedDay(day.key)}
                         className={cn(
-                            'cursor-pointer rounded-lg border-2 text-lg shadow-sm transition-all duration-200 hover:shadow-md',
+                            'cursor-pointer rounded-lg border-2 text-base sm:text-lg shadow-sm transition-all duration-200 hover:shadow-md px-4 py-2 sm:px-6 sm:py-3',
                             selectedDay === day.key ? 'border-primary bg-muted text-primary scale-105' : 'border-border'
                         )}
                         style={

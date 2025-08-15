@@ -7,6 +7,7 @@ type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'warm' | 'olive' | 'ou
 
 interface CustomButtonProps {
     children: React.ReactNode;
+    icon?: React.ReactNode;
     variant?: ButtonVariant;
     size?: 'sm' | 'md' | 'lg' | 'xl';
     className?: string;
@@ -15,10 +16,12 @@ interface CustomButtonProps {
     href?: string;
     target?: string;
     rel?: string;
+    type?: 'button' | 'submit' | 'reset';
 }
 
 const CustomButton = ({
     children,
+    icon,
     variant = 'primary',
     size = 'md',
     className = '',
@@ -176,7 +179,7 @@ const CustomButton = ({
                     background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)'
                 }}
             />
-            <span className='relative z-10 flex items-center gap-2'>{children}</span>
+            <span className='relative z-10 flex items-center gap-2'>{icon}{children}</span>
         </>
     );
 

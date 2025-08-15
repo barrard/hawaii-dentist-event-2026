@@ -1,0 +1,16 @@
+[
+  {
+    "firstName": "David",
+    "lastName": "Barrar",
+    "preferredName": "asdasd",
+    "title": "",
+    "email": "barrard@gmail.com",
+    "phone": "8087578273",
+    "memberships": [
+      "guest"
+    ],
+    "guests": "",
+    "allergies": "",
+    "golf": "no"
+  }
+]
