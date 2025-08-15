@@ -49,6 +49,7 @@ const EventSchedule = () => {
         if (event.toLowerCase().includes('golf')) {
             return <Users className='h-4 w-4' />;
         }
+
         return <Clock className='h-4 w-4' />;
     };
 
@@ -146,6 +147,7 @@ const EventSchedule = () => {
                 color: colors.mutedForeground
             }
         };
+
         return (
             colorMap[type] || {
                 borderColor: colors.foreground,

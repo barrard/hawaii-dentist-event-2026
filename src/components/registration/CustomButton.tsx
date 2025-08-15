@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import { colors } from '@/lib/colors';
 
+type ButtonVariant = 'primary' | 'secondary' | 'accent' | 'warm' | 'olive' | 'outline' | 'ghost' | 'gradient' | 'dark';
+
 interface CustomButtonProps {
     children: React.ReactNode;
-    variant?: 'primary' | 'secondary' | 'accent' | 'warm' | 'olive' | 'outline' | 'ghost' | 'gradient' | 'dark';
+    variant?: ButtonVariant;
     size?: 'sm' | 'md' | 'lg' | 'xl';
     className?: string;
     disabled?: boolean;
@@ -43,8 +45,8 @@ const CustomButton = ({
         xl: 'px-10 py-5 text-xl rounded-2xl'
     };
 
-    const getVariantStyle = (variant) => {
-        const variants = {
+    const getVariantStyle = (variant: ButtonVariant) => {
+        const variants: Record<ButtonVariant, any> = {
             primary: {
                 backgroundColor: colors.primary,
                 color: '#ffffff',
@@ -136,6 +138,7 @@ const CustomButton = ({
                 }
             }
         };
+
         return variants[variant] || variants.primary;
     };
 
